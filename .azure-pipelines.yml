@@ -11,4 +11,7 @@ jobs:
   pool:
     vmImage: vs2017-win2016
   steps:
+  - script: |
+      tzutil /s "Pacific Standard Time"
+    displayName: 'Set timezone for tests'
   - template: '.azure-pipelines-steps.yml'
